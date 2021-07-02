@@ -2,6 +2,9 @@ Git:
  1.Local:working directory->stage(Intermediate positon)->local Repository->
  2.Remote:
 
+#scm = source code repository
+#cd = change directory
+
 #Remote--> $ git fetch <--local Repository
 #Remote--> $ git clone/pull <--working directory
 #work Directory--> $ git diff <--staging area
