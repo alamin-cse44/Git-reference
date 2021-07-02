@@ -1,0 +1,85 @@
+Git:
+ 1.Local:working directory->stage(Intermediate positon)->local Repository->
+ 2.Remote:
+
+#Remote--> $ git fetch <--local Repository
+#Remote--> $ git clone/pull <--working directory
+#work Directory--> $ git diff <--staging area
+#work Directory--> $ git diff HEAD <--local rep
+
+
+
+#Command Line:
+$ cd .. (reduce folder path)
+$ cd folder_name/ (increase folder path)
+$ mkdir gitone (create a folder for git from path)
+
+***user name and email:
+#global:
+$ git config --global user.name "user_name"
+$ git config --global user.email "email@"
+#Local
+$ git config --local user.name "user_name"
+$ git config --local user.email "email@gmail.com"
+$ git config --list [see your user name and email]
+
+
+$ touch name.txt (create a text file)
+$ clear (clear the command page)
+$ git init (initialized an empty git repository)[It's a hidden file]
+N.B:For creating a repository in cloud(github) log in a account. You can create  file in cloud by following creating section but that will not related with local repository
+
+*If you want to clone cloud repo with local then
+$ git clone https://github.com/rehan-alamin/gitone.git (copy the code path)
+$ git status (see untracked file)
+
+*adding working directory to stage
+$ git add --all or -A
+NB: Now your file is updated and staged but if u want to return ur unstaged position use
+$ git reset
+$ git add . (only add the this folder text file)
+$ git add * (staged all file except deleted file and folder(not inside this folder text))
+$ git add one.txt (add individual file)
+$git add folder/one.txt (folder inside folder text file)
+$ git add *.txt (add all file with text extension)
+
+
+**stage to localrepositoty
+$ git commit -m "Here write comment" 
+$ git log [see the total commited file]
+$ git log --oneline [update of log]
+$ git checkout 6248fd53(log no) [delete new file]
+$ git diff [last stage to latest stage]
+$ git show 45dfd54f [see the changes file name]
+$ git rm file.txt [remove a text file permt]
+$ git reset HEAD file.txt [file remove from stage after remove permanently]
+
+
+***remove user name and email go credential manager
+
+
+*branching 
+$ git branch (check ur branch)
+
+$ git branch new_branch (create new branch)
+
+$ git checkout new_branch (switch new branch)
+
+NB: when you stay new branch u see this brancher file with main file but if return main branch u can't see new_branch file
+
+$ git merge main -m "merging new_branch with main branch"
+
+$ git merge new_branch -m "merging main with new branch"
+$ git branch -D branch_name [deleted]
+
+NB: merge conflict
+if we develop one file in two stage then we find an error to avoid error we shoould delete one stage updated file then add,commit and merge two stage then merge with main of anyone branch
+
+
+
+1**local repository to remote: push
+2** remote to local repo: fetch->pull
+1:
+$ git push origin mian
+2. $git fetch
+   $ git pull
